@@ -6,3 +6,14 @@
 <%@ page import="java.util.*, java.text.*, com.epam.rd.jsp.currencies.CurrenciesOfCurrentTestCase" %>
 
 <jsp:useBean id="currencies" class="com.epam.rd.jsp.currencies.CurrenciesOfCurrentTestCase" scope="request"/>
+<html>
+<head><title>Currencies</title></head>
+<body>
+<h1>Currencies</h1>
+<ul>
+    <c:forEach var="currency" items="${currencies.currencies}">
+        <li><c:out value="${currency}"/></li>
+    </c:forEach>
+</ul>
+</body>
+</html>
